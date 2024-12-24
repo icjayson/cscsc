@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Gift Box for Trang Linh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="document.body.style.opacity='1'">
+    <audio id="background-music" autoplay loop style="display: none;" muted>
+        <source src="jingle-bells-christmas-holidays-celebration-background-intro-theme-265841.mp3" type="audio/mpeg">
+        <source src="jingle-bells-christmas-holidays-celebration-background-intro-theme-265841.ogg" type="audio/ogg">    
+    </audio>
+    <script>
+      document.body.addEventListener('click', () => {
+        const audio = document.getElementById('background-music');
+        audio.muted = false; // Bỏ tắt tiếng
+        audio.play();
+      });
+    </script>
+    <div class="snow"></div>
+    <h1>Christmas Gift<br>🎄🎅🏻🎄</h1>
+    <form id="loginForm">
+      <input type="text" id="usernameInput" placeholder="Your name">
+      <input type="password" id="passwordInput" placeholder="Password">
+      <button type="button" id="loginButton">Log in</button>
+      <p class="error" id="errorMessage"></p>
+      <p class="success" id="successMessage"></p>
+    </form>
+    <script src="login.js"></script>
+</body>
+</html>

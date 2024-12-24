@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blind box time!</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Hàm mở tab mới với delay
+    function openGiftWithDelay(url, delay) {
+      setTimeout(() => {
+        window.open(url, '_blank'); // Mở tab mới sau khi delay
+      }, delay); // Thời gian delay tính bằng milliseconds
+    }
+  </script>
+</head>
+<body>
+  <audio id="background-music" autoplay loop style="display: none;" muted>
+    <source src="jingle-bells-christmas-holidays-celebration-background-intro-theme-265841.mp3" type="audio/mpeg">
+    <source src="jingle-bells-christmas-holidays-celebration-background-intro-theme-265841.ogg" type="audio/ogg">    
+  </audio>
+  <script>
+    document.body.addEventListener('click', () => {
+      const audio = document.getElementById('background-music');
+      audio.muted = false; // Bỏ tắt tiếng
+      audio.play();
+    });
+  </script>
+  
+  <div class="snow"></div>
+  <h1>Open blind box! <br>🎄🎅🏻🎄</h1>
+  <div class="container">
+    <div class="gift-box" onclick="this.classList.toggle('open')">
+      <div class="lid">
+        <img src="bow2.png" alt=no class="bow-image">
+      </div>
+      <div class="ribbon"></div>
+      <div class="ribbon-horizontal"></div>
+      <div class="content">Wishing you a Christmas as dazzling as your smile and as warm as your heart!</div>
+    </div>
+    <div class="gift-box" onclick="this.classList.toggle('open'); /*openGiftWithDelay('https://www.flaticon.com/free-icon/christmas-wreath_3858893?term=wreath+bow&page=1&position=72&origin=search&related_id=3858893', 800);*/">
+      <div class="lid">
+        <img src="bow9.png" alt="Nơ" class="bow-image">
+      </div>
+      <div class="ribbon"></div>
+      <div class="ribbon-horizontal"></div>
+      <div class="content">Em giỏi lắm, nhất định em sẽ thực hiện được những gì em mong muốn! I trust you!</div>
+    </div>
+    <div class="gift-box" onclick="this.classList.toggle('open')">
+      <div class="lid">
+        <img src="bow10.png" alt="Nơ" class="bow-image">
+      </div>
+      <div class="ribbon"></div>
+      <div class="ribbon-horizontal"></div>
+      <div class="flower">
+        <p>I pick this bouquet to say Merry Christmas, but it cannot compare to how amazing you are!</p>
+        <div class="image-container">
+          <img src="/hoa2.png" alt="E đợi load ảnh nhé!">
+        </div>
+      </div>    </div>
+    <div class="gift-box" onclick="this.classList.toggle('open')">
+      <div class="lid">
+        <img src="bow8.png" alt="Nơ" class="bow-image">
+      </div>
+      <div class="ribbon"></div>
+      <div class="ribbon-horizontal"></div>
+      <div class="card">
+        <p>Meow! Con mèo nhà anh nó bảo "chúc chị Giáng sinh vui vẻ!"</p>
+        <div class="image-container">
+          <img src="/meo2.JPG" alt="E đợi load ảnh nhé!">
+          <img src="/meo1.jpeg" alt="E đợi load ảnh nhé!">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
